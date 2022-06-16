@@ -9,6 +9,7 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+<<<<<<< HEAD
   
   
   <servlet>
@@ -27,3 +28,19 @@
   
   
 </web-app>
+=======
+    
+  <servlet>
+  <servlet-name>FrontController</servlet-name>
+  <servlet-class>jspstudy.controller.FrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FrontController</servlet-name>
+  <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+</web-app>
+>>>>>>> branch 'master' of https://github.com/tjdwnd105/apiB.git
