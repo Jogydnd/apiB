@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+    font-family: "Noto Sans KR", sans-serif !important;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    text-align: center;
+}
+
+    section > div {
+        display: inline-block;
+        background-color: #12b886;
+        padding: 0 30px;
+        border-radius: 7px;
+    }
+
+        section > div > nav {
+            display: inline-block;
+        }
+
+            section > div > nav > a {
+                display: block;
+                padding: 20px 10px 20px 10px;
+                font-size: 20px;
+            }
+
+                section > div > nav > a:hover {
+                    background-color: #12b886;
+                    color: #ffff;
+                    cursor: pointer;
+                }

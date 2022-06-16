@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>회원가입 페이지</title>
+<style>
+table {border : 1px solid black; }
+td, th, tr {
+text-align : left;
+padding:10px;
+height: 30px; width: 150px;
+border : 1px solid black; }
+#ty {text-align : left;
+padding:10px;
+height: 30px; width: 50px;
+border : 1px solid black;}
+#ㅇㅇ{text-align:center;}
+</style>
+<script type="text/javascript">
+function check() {   // 유효성 검사
+	//alert 알림창 ("테스트 입니다.")
+	var fm = document.frm;
+	if(fm.id.value==""){   // 아이디가 기입되지 않은 경우
+		alert("아이디를 입력하세요.")
+		fm.id.focus();
+		return;
+	}else if(fm.password==""){   // 비밀번호가 누락된 경우
+		alert("비밀번호를 입력하세요.")
+		fm.password.focus();
+		return;
+	}else if(fm.password2){    // 비밀번호 확인이 누락된 경우
+		alert("비밀번호 확인을 입력해주세요.")
+		fm.password2.focus();
+		return;
+	}else if(fm.password.value!=fm.password2.value){   // 비밀번호와 비밀번호 확인이 일치하지 않을 경우
+		alert("비밀번호가 일치하지 않습니다.");
+		fm.password2.value="";
+		fm.password2.focus();
+		return;
+	}else if(fm.name.value=="") {    // 이름을 입력하지 않았을 경우
+		alert("이름을 입력해주세요.");
+		fm.name.focus();
+		return;
+	}else if(fm.Email.value=="") {  // 이메일을 입력하지 않았을 경우
+		alert("이메일을 입력해주세요.");
+		fm.Email.focus();
+		return;
+	}else if(fm.date.value==""){  // 생년월일을 입력하지 않았을 경우
+		alert("생년월일을 입력해주세요.");
+		fm.date.focus();
+		return;
+	}
+	else {
+		var flag = false;    // 기본값 체크가 안된 상태를 false로 지정
+		for(var i = 0; i<fm.hobby.length; i++){    // 배열을 반복해
+			if(fm.hobby[i].checked == true) {    // 각 배열 방에 값이 하나라도 있다면
+				flag = true;     // true 출력 후
+				break;     // 반복 종료
+			}
+		}
+		if(flag == false) {   //취미 선택 X일 경우
+			alert("취미를 한개 이상 선택해주세요.");
+			return
+		}
+	}	
+	alert("전송합니다.")   //위에 조건 모두 충족 후 확인 버튼 클릭
+}
+</script>
+</head>
+<body>
+<h3>회원 가입 페이지</h3>
+<form name="frm">
+<table>
+<thead>
+<tr><th id="ty">아이디</th><th><input type="text" name="id"></th></tr></thead>
+<tbody><tr><td id="ty">비밀번호</td><td><input type="password" name ="password"></td></tr>
+<tr><td id="ty">비밀번호 확인</td><td><input type="password" name ="password2"></td></tr>
+<tr><td id="ty">이름</td><td><input type="text" name="이름"></td></tr>
+<tr><td id="ty">이메일</td><td><input type="email" placeholder="id@host" name="이메일"></td></tr>
+<tr><td id="ty">생년월일</td><td><input type="date" name="생년월일"></td></tr>
+<tr><td id="ty">성별</td><td><input type="radio" name="성별" value="남">남<input type="radio" name="성별" value="여">여</td></tr> 
+</tbody>
+<tfoot>
+<tr><td id="ty">취미</td><td><input type="checkbox" name="취미" value="취미">축구<input type="checkbox" name="취미" value="취미">농구
+<input type="checkbox" name="취미" value="취미">야구</td></tr>
+</table>
+<br>
+<input id="ㅇㅇ" type="submit" name="제출" value="확인">
+</form>
+</body>
+</html>

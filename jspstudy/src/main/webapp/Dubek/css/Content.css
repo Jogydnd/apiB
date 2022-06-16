@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+table{
+	margin-left: auto;
+    margin-right: auto;
+    width : 80%;
+    text-align:center
+}
+form{ 
+margin: 50px; 
+}
+form input{ 
+position: relative;
+ left: 3px; 
+}
+.emoticon{
+cursor: pointer;
+background:#FFFFFF; 
+border:0; 
+font-size:1.5em;
+}
+
+#emo_scrip{
+font-size:1em;
+text-align:center;
+}
+#emo_num{
+text-align:center;
+font-size:1.3em;
+}
+
+.retext{
+border:1; 
+padding: 16px 16px 24px; 
+margin:0px 0px 16px; 
+background:#FFFFFF;
+}
+
+.rebtn{
+font: 16px -apple-system, BlinkMacSystemFont; 
+Color:#FFFFFF; 
+Background:#12B886; 
+Padding:0px 20px; 
+
+}
